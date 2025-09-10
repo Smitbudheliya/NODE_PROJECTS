@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home - TechWithSmit</title>
+
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      background-color: #f9fafc;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background-color: #4b0082;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffb84d;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 650px;
+      margin: 0 auto 25px auto;
+    }
+
+    .hero a {
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      background-color: #ff7f50;
+      padding: 12px 28px;
+      border-radius: 30px;
+      margin: 10px;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+
+    .hero a:hover {
+      background-color: #e06b3c;
+    }
+
+    /* Features Section */
+    .features {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      padding: 60px 20px;
+      background: #fff;
+    }
+
+    .card {
+      background: white;
+      padding: 25px 20px;
+      border-radius: 12px;
+      width: 280px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      color: #4b0082;
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+
+    .card p {
+      color: #444;
+      font-size: 15px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #4b0082;
+      color: white;
+      text-align: center;
+      padding: 18px;
+      margin-top: 20px;
+      font-size: 15px;
+    }
+
+    /* Responsive nav */
+    @media (max-width: 600px) {
+      nav {
+        margin-top: 10px;
+        text-align: center;
+        width: 100%;
+      }
+
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="/" style="color: #ffffff; text-decoration: none;" class="logo">TechWithSmit</a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/blog">Blog</a>
+      <a href="/contact">Contact</a>
+      <a href="/product">Products</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to TechWithSmit</h1>
+    <p>Your go-to hub for blogs, insights, and innovative products that make technology simple and accessible for everyone.</p>
+    <a href="/about">Know Us</a>
+    <a href="/product">Browse Products</a>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="card">
+      <h3>Expert Blogs</h3>
+      <p>Stay updated with latest trends, guides, and tutorials written in simple language.</p>
+    </div>
+    <div class="card">
+      <h3>Smart Products</h3>
+      <p>Find modern and useful products that fit into your lifestyle with ease.</p>
+    </div>
+    <div class="card">
+      <h3>Always Connected</h3>
+      <p>Have questions? Our team is just a message away to support you anytime.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 TechWithSmit | Crafted with passion</p>
+  </footer>
+
+</body>
+</html>

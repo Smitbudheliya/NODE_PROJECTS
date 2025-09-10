@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products - TechWithSmit</title>
+
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f6fb;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background-color: #4b0082;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffb84d;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 70px 20px;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+    /* Product Grid */
+    .product-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    }
+
+    .product-content {
+      padding: 25px 20px;
+    }
+
+    .product-content h3 {
+      margin-bottom: 10px;
+      color: #4b0082;
+      font-size: 20px;
+    }
+
+    .product-content p {
+      font-size: 17px;
+      font-weight: bold;
+      color: #222;
+      margin-bottom: 18px;
+    }
+
+    .product-content a {
+      display: inline-block;
+      text-decoration: none;
+      background: #ff7f50;
+      color: white;
+      padding: 10px 22px;
+      border-radius: 30px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .product-content a:hover {
+      background: #e06b3c;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #4b0082;
+      color: white;
+      text-align: center;
+      padding: 18px;
+      margin-top: 25px;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="/" style="color: #ffffff; text-decoration: none;" class="logo">TechWithSmit</a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/blog">Blog</a>
+      <a href="/contact">Contact</a>
+      <a href="/product">Products</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Our Latest Products</h1>
+    <p>Discover trending and innovative tech products handpicked for you.</p>
+  </section>
+
+  <!-- Product Grid -->
+  <section class="product-section">
+    <div class="product-card">
+      <div class="product-content">
+        <h3>Smartphone</h3>
+        <p>$499</p>
+        <a href="#">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-content">
+        <h3>Headphones</h3>
+        <p>$199</p>
+        <a href="#">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-content">
+        <h3>Laptop</h3>
+        <p>$899</p>
+        <a href="#">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-content">
+        <h3>Smartwatch</h3>
+        <p>$249</p>
+        <a href="#">Buy Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 TechWithSmit | Crafted with passion</p>
+  </footer>
+
+</body>
+</html>

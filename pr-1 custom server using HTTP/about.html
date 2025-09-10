@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - TechWithSmit</title>
+
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f6fb;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background-color: #4b0082;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffb84d;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 70px 20px;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 650px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+
+    /* About Section */
+    .about-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 20px;
+      flex-wrap: wrap;
+      background: #fff;
+      border-radius: 12px;
+      max-width: 1100px;
+      margin: 40px auto;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    }
+
+    .about-text {
+      flex: 2;
+      min-width: 280px;
+      padding: 20px;
+    }
+
+    .about-text h2 {
+      font-size: 30px;
+      margin-bottom: 15px;
+      color: #4b0082;
+    }
+
+    .about-text p {
+      font-size: 16px;
+      color: #444;
+    }
+
+    /* Features / Cards */
+    .features {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      padding: 60px 20px;
+      background-color: #f2f2f2;
+    }
+
+    .card {
+      background: white;
+      padding: 25px 20px;
+      border-radius: 12px;
+      width: 280px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      color: #4b0082;
+      font-size: 20px;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 15px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #4b0082;
+      color: white;
+      text-align: center;
+      padding: 18px;
+      margin-top: 30px;
+      font-size: 15px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .about-section {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="/" style="color: #ffffff; text-decoration: none;" class="logo">TechWithSmit</a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/blog">Blog</a>
+      <a href="/contact">Contact</a>
+      <a href="/product">Products</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>About TechWithSmit</h1>
+    <p>We’re on a mission to simplify technology and share valuable knowledge with passion, creativity, and dedication.</p>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="about-text">
+      <h2>Our Story</h2>
+      <p>
+        TechWithSmit was founded with a vision to make tech knowledge accessible to everyone. 
+        From blogs and tutorials to curated products, we bring you the best resources and tools 
+        that inspire innovation and learning. Our dedicated team works every day to create meaningful 
+        experiences and empower our community.
+      </p>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="card">
+      <h3>Our Mission</h3>
+      <p>Deliver quality content and innovative products that add real value to people’s lives.</p>
+    </div>
+    <div class="card">
+      <h3>Our Values</h3>
+      <p>Integrity, transparency, and user-first approach define how we work and grow.</p>
+    </div>
+    <div class="card">
+      <h3>Our Vision</h3>
+      <p>To become a trusted global platform where learning and technology meet seamlessly.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 TechWithSmit | Crafted with passion</p>
+  </footer>
+
+</body>
+</html>
