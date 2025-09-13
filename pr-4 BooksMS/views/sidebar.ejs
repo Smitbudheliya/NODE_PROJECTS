@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sidebar Menu</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background: #1e1e2f;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    /* Sidebar Gradient */
+    .offcanvas-start {
+      background: linear-gradient(160deg, #1f1c2c, #928dab);
+    }
+    .offcanvas-header h5 {
+      font-weight: bold;
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+    }
+    /* Menu Links */
+    .offcanvas-body ul li a {
+      display: flex;
+      align-items: center;
+      padding: 10px 12px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      font-size: 15px;
+    }
+    .offcanvas-body ul li a i {
+      font-size: 1.2rem;
+      transition: transform 0.2s;
+    }
+    .offcanvas-body ul li a:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff !important;
+      transform: translateX(4px);
+    }
+    .offcanvas-body ul li a:hover i {
+      transform: scale(1.2);
+    }
+    /* Toggle Button */
+    .sidebar-toggle-btn {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      z-index: 1050;
+      background: linear-gradient(90deg, #667eea, #764ba2);
+      border: none;
+      padding: 10px 14px;
+      border-radius: 50px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    }
+    .sidebar-toggle-btn i {
+      color: #fff;
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Sidebar Toggle Button -->
+  <button class="sidebar-toggle-btn" type="button" data-bs-toggle="offcanvas"
+    data-bs-target="#sidebarMenu" aria-controls="sidebarMenu">
+    <i class="bi bi-list"></i>
+  </button>
+
+  <!-- Offcanvas Sidebar -->
+  <div class="offcanvas offcanvas-start text-light" tabindex="-1" id="sidebarMenu"
+    aria-labelledby="sidebarMenuLabel">
+    <div class="offcanvas-header border-bottom border-light">
+      <h5 class="offcanvas-title" id="sidebarMenuLabel">📚 BookMS</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+        aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="list-unstyled">
+        <li class="mb-2">
+          <a href="/" class="text-decoration-none text-light">
+            <i class="bi bi-plus-circle text-success me-2"></i> Add Book
+          </a>
+        </li>
+        <li class="mb-2">
+          <a href="/showData" class="text-decoration-none text-light">
+            <i class="bi bi-book text-info me-2"></i> Show Books
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

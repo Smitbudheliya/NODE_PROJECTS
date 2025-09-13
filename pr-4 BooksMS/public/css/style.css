@@ -1,0 +1,157 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #121212;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 20px;
+}
+
+.content {
+    max-width: 900px;
+    margin: auto;
+    background: #1e1e1e;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.5);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #00bcd4;
+}
+
+/* Form layout */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #90caf9;
+}
+
+input, textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #2c2c2c;
+    color: #f1f1f1;
+    outline: none;
+    font-size: 14px;
+}
+
+input:focus, textarea:focus {
+    border: 1px solid #00bcd4;
+    background: #333;
+}
+
+/* Full width for description */
+.full-width {
+    grid-column: span 2;
+}
+
+/* Button */
+.form-actions {
+    text-align: center;
+}
+
+button {
+    padding: 12px 25px;
+    background: #00bcd4;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #0097a7;
+    transform: scale(1.05);
+}
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h2 {
+  color: #00bcd4;
+}
+
+.btn-link {
+  text-decoration: none;
+  background: #00bcd4;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.btn-link:hover {
+  background: #0097a7;
+}
+
+/* Table */
+.table-container {
+  overflow-x: auto;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background: #1e1e1e;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.4);
+}
+
+.styled-table thead {
+  background: #00bcd4;
+  color: white;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #2c2c2c;
+}
+
+.styled-table tbody tr:hover {
+  background: #2c2c2c;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: none;
+}
+
+/* No Data */
+.no-data {
+  text-align: center;
+  padding: 20px;
+  color: #aaa;
+}
