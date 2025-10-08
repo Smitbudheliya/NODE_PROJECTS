@@ -1,0 +1,74 @@
+
+
+<%- include('../header') %>
+
+  <div class="page-wrapper d-flex flex-column min-vh-100">
+    <div class="container-fluid flex-grow-1 py-5">
+
+      <!-- Heading -->
+      <h2 class="text-center mb-5 fw-bold text-dark">Our Blog</h2>
+
+      <!-- Search Box -->
+      <form action="/blog/search" method="get" class="mb-5" style="max-width: 500px; margin:auto;">
+        <div class="input-group shadow-sm rounded-pill overflow-hidden">
+          <input type="text" name="q" class="form-control border-0 py-2" placeholder="🔍 Search blogs by title...">
+          <button type="submit" class="btn btn-dark px-4 fw-bold">
+            Serch
+          </button>
+        </div>
+      </form>
+
+      <!-- Blog Grid -->
+      <div class="row g-4" id="blogContainer">
+        <% data.forEach((blog)=> { %>
+          <div class="col-lg-4 col-md-6 blog-item">
+            <div class="card rounded-3 border-0 shadow-sm blog-card">
+
+              <!-- Blog Image -->
+              <a href="/blog/detail/<%= blog._id %>">
+                <img src="<%= blog.image %>" class="card-img-top" alt="Blog Image"
+                  style="height:auto; width:100%; object-fit:contain;">
+
+                <div class="d-flex justify-content-space-between
+                 mt-auto" style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);">
+                  <a href="/blog/edit/<%= blog._id %>" class="btn btn-sm text-white"
+                    style="background-color: rgba(0, 81, 255, 0.11);">Edit</a>
+                  <form action="/blog/delete/<%= blog._id %>" method="post" style="display:inline; ">
+                    <button type="submit" style="background-color: rgba(0, 81, 255, 0.11);"
+                      class="btn btn-sm text-white">Delete</button>
+                  </form>
+
+                </div>
+              </a>
+
+
+            </div>
+          </div>
+          <% }) %>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    /* Blog Card */
+    .blog-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Search Box */
+    .input-group input {
+      font-size: 14px;
+    }
+
+    /* Buttons */
+    .btn-dark {
+      margin-left: 5px;
+    }
+  </style>
+
+  <%- include('../footer') %>
