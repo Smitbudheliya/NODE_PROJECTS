@@ -4,7 +4,7 @@ const path = require('path');
 const Book = require('./model/bookModel');
 const db = require('./config/db');
 const app = express();
-const port = 3001;
+const port = 3000;
 
 app.use(express.static(path.join(__dirname, 'public')));  // public/css/style.css
 app.use('/uploads', express.static(path.join(__dirname, 'uploads'))); // uploads folder serve karega

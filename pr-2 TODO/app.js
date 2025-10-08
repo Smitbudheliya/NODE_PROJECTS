@@ -3,7 +3,7 @@ const path = require('path');
 const db = require('./config/db');
 const Todo = require('./models/todoModel');
 const app = express();
-const port = 3000;
+const port = 3001;
 
 app.use(express.urlencoded({ extended: true })); //req.body maate
 app.set('view engine', 'ejs'); // EJS template engine
