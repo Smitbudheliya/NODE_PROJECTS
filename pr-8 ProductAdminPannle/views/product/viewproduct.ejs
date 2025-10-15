@@ -1,0 +1,53 @@
+<%- include('../header') %>
+
+<div class="page-wrapper">
+    <div class="page-breadcrumb">
+        <div class="row">
+            <div class="col-12 d-flex no-block align-items-center">
+                <h4 class="page-title">Products</h4>
+                <div class="ml-auto text-right">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Products</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <% products.map((v, i) => { %>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <a href="/product/<%= v._id %>">
+                        
+                    </a>
+                    <img src="/uploads/productsimages/<%= v.image %>" class="card-img-center" style="object-fit:cover;" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= v.title %></h5>
+                        <p class="card-text">
+                            <strong>Description:</strong> <%= v.description.substring(0, 50) %>...
+                            <br>
+                            <strong>Price:</strong> ₹ <%= v.price %> <br>   
+                            <strong>Quantity:</strong> <%= v.quantity %>
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <a href="/product/<%= v._id %>" class="btn btn-sm btn-outline-info">🔍 Read More</a>
+                                <a href="/product/edit/<%= v._id %>" class="btn btn-sm btn-outline-primary">✏️ Edit</a>
+                                <a href="/product/delete/<%= v._id %>" class="btn btn-sm btn-outline-danger">🗑️ Delete</a>
+                            </div>
+                            <small class="text-muted">#<%= i + 1 %></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+</div>
+
+<%- include('../footer') %>

@@ -1,0 +1,66 @@
+<%- include('../header') %>
+    <div class="page-wrapper">
+        <div class="page-breadcrumb">
+            <div class="row">
+                <div class="col-12 d-flex no-block align-items-center">
+                    <h4 class="page-title">Edit Subcategory</h4>
+                    <div class="ml-auto text-right">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Subcategory</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <form class="form-horizontal" method="post"
+                            action="/subcategory/updatesubcategory/<%= subcategory._id %>">
+                            <div class="card-body">
+                                <h4 class="card-title">Subcategory Info</h4>
+
+                                <!-- Category -->
+                                <div class="form-group row">
+                                    <label for="categoryname"
+                                        class="col-sm-3 text-right control-label col-form-label">Category</label>
+                                    <div class="col-sm-9">
+                                        <select name="categoryname" class="form-control" id="categoryname" disabled>
+                                            <option value="<%= subcategory.category.id %>" selected>
+                                                <%= subcategory.category.categoryname %>
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Subcategory Name -->
+                                <div class="form-group row">
+                                    <label for="subcategoryname"
+                                        class="col-sm-3 text-right control-label col-form-label">Subcategory
+                                        Name</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" name="subcategory" class="form-control" id="subcategoryname"
+                                            placeholder="Subcategory Name Here" value="<%= subcategory.subcategory %>">
+                                    </div>
+                                </div>
+
+                                <div class="border-top">
+                                    <div class="card-body">
+                                        <button type="submit" class="btn btn-primary">Update</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include('../footer') %>

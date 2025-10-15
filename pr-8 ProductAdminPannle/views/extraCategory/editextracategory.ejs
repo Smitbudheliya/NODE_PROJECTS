@@ -1,0 +1,84 @@
+<%- include('../header') %>
+    <div class="page-wrapper">
+        <div class="page-breadcrumb">
+            <div class="row">
+                <div class="col-12 d-flex no-block align-items-center">
+                    <h4 class="page-title">Edit Extra Category</h4>
+                    <div class="ml-auto text-right">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Extra Category</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <form class="form-horizontal" method="post"
+                            action="/extracategory/updateextracategory/<%= extracategory._id %>">
+                            <div class="card-body">
+                                <h4 class="card-title">Extra Category Info</h4>
+
+                                <!-- Category -->
+                                <div class="form-group row">
+                                    <label for="categoryname" class="col-sm-3 text-right control-label col-form-label">
+                                        Category
+                                    </label>
+                                    <div class="col-sm-9">
+                                        <select name="categoryname" class="form-control" id="categoryname" disabled>
+                                            <option value="<%= extracategory.category._id %>" selected>
+                                                <%= extracategory.category.categoryname %>
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Subcategory -->
+                                <div class="form-group row">
+                                    <label for="subcategoryname"
+                                        class="col-sm-3 text-right control-label col-form-label">
+                                        Subcategory
+                                    </label>
+                                    <div class="col-sm-9">
+                                        <select name="subcategoryname" class="form-control" id="subcategoryname"
+                                            disabled>
+                                            <option value="<%= extracategory.subcategory._id %>" selected>
+                                                <%= extracategory.subcategory.subcategory %>
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Extra Category Name -->
+                                <div class="form-group row">
+                                    <label for="extracategoryname"
+                                        class="col-sm-3 text-right control-label col-form-label">
+                                        Extra Category
+                                    </label>
+                                    <div class="col-sm-9">
+                                        <input type="text" name="extracategory" class="form-control"
+                                            id="extracategoryname" placeholder="Extra Category Name Here"
+                                            value="<%= extracategory.extracategory %>">
+                                    </div>
+                                </div>
+
+                                <div class="border-top">
+                                    <div class="card-body">
+                                        <button type="submit" class="btn btn-primary">Update</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include('../footer') %>

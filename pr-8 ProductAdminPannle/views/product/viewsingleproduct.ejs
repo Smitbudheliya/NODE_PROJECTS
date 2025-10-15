@@ -1,0 +1,23 @@
+<%- include('../header') %>
+
+<div class="page-wrapper">
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="/uploads/productsimages/<%= product.image %>" class="img-fluid" style="object-fit:cover;" alt="Product Image">
+            </div>
+            <div class="col-md-6">
+                <h2><%= product.title %></h2>
+                <p><strong>Category:</strong> <%= product.category.categoryname %></p>
+                <p><strong>Subcategory:</strong> <%= product.subcategory.subcategory %></p>
+                <p><strong>Extra Category:</strong> <%= product.extracategory.extracategory %></p>
+                <p><strong>Description:</strong> <%= product.description %></p>
+                <p><strong>Price:</strong> ₹ <%= product.price %></p>
+                <p><strong>Quantity:</strong> <%= product.quantity %></p>
+                <a href="/product/viewproductpage" class="btn btn-primary mt-3">Back to Products</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('../footer') %>
